@@ -1,0 +1,23 @@
+Identifier = "Heartometer"
+Name = "Heartometer"
+NameShort = "Heartometer"
+
+Description = {
+	English = "Heartometer shows changes in faction notoriety",
+	German = "Heartometer zeigt Änderungen des Rufs bei Fraktionen an",
+}
+Author = "Wym"
+Website = "none"
+Version = "0.1"
+Email = "Wym@Brutwacht-EU"
+Environment = {"1.8"}
+RunOnStartup = {
+	"Translations.lua",
+	"UI.lua",
+	"main.lua",
+}
+SavedVariables = {
+	HeartometerChar = 'character',
+	HeartometerShard = 'shard',
+	HeartometerGlobal = 'global',
+}
