@@ -61,6 +61,10 @@ function Heartometer.SlashHandler(args)
 			HeartometerChar.width=tonumber(r[1])
 			HeartometerUI.newSize()
 		end
+		if r[0] == "height" then
+			HeartometerChar.height=tonumber(r[1])
+			HeartometerUI.newSize()
+		end
 	end
 end
 

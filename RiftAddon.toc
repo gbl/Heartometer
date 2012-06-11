@@ -8,7 +8,7 @@ Description = {
 }
 Author = "Wym"
 Website = "none"
-Version = "0.1"
+Version = "0.12"
 Email = "Wym@Brutwacht-EU"
 Environment = {"1.8"}
 RunOnStartup = {
