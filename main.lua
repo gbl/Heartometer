@@ -11,7 +11,7 @@ local function L(x) return Translations.Heartometer.L(x) end
 
 local function ensureVariablesInited()
 	if not HeartometerChar then HeartometerChar={} end
-	HeartometerChar.width=HeartometerChar.width or 300
+	HeartometerChar.width=HeartometerChar.width or 600
 	HeartometerChar.height=HeartometerChar.height or 20
 	if not HeartometerChar.xpos then HeartometerChar.xpos = 200 end
 	if not HeartometerChar.ypos then HeartometerChar.ypos = 200 end
@@ -31,7 +31,11 @@ local function factionChanged(factions)
 		end
 		if Heartometer.CurrentNotoriety[k] ~= v then
 			Heartometer.CurrentNotoriety[k]=v
-			HeartometerUI.UpdateFactionWindow(k, v)
+			HeartometerChar.lastFactionID=k
+		end
+		if (k==HeartometerChar.lastFactionID and not HeartometerChar.fixedFactionID)
+		or (k==HeartometerChar.fixedFactionID) then
+			HeartometerUI.UpdateFactionWindow(k)
 		end
 	end
 end
